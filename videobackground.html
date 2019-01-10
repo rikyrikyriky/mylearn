@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video Background</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<style>
+body{
+	margin:0;
+	padding: 0;
+}
+.videobackground {
+	width:100%;
+	height: 100vh;
+	overflow: hidden;
+}
+.videobackground video {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	width: 100%;
+	object-fit:cover;
+	pointer-events: none;
+}
+
+.videobackground .text {
+	position: absolute;
+	z-index: 1;
+	width: 70%;
+	color: white;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding-top: 20px;
+	text-align: center;
+	font-family: calibri;
+}
+
+.videobackground .text h1{
+	margin: 0;
+	padding: : 0;
+	text-transform: uppercase;
+	font-size: 4.5em;
+}
+.videobackground .text p {
+	font-size: 1.2em;
+}
+.text2 {
+	position: relative;
+	width: 100%;
+	height:100vh;
+}
+.videobackground:before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background:linear-gradient(to right, #c31432, #240b36);
+	background-size: 400% 400%;
+	opacity: .5;
+	z-index: 1;
+	animation: bggradient 3s linear infinite;
+}
+@keyframes bggradient {
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+}
+</style>
+
+<body>
+
+<div class="videobackground">
+	<video autoplay muted loop>
+    <!-- video.mp4 ( change with your video ) -->
+		<source src="video.mp4" type="video/mp4">
+	</video>
+
+	<div class="text">
+		<h1>Video Background</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec turpis sit amet justo laoreet sollicitudin. Donec fermentum elit iaculis lorem tempus, non rutrum nibh finibus. Mauris quis sapien vel est molestie viverra eu a nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus molestie ex eu libero tristique. </p>
+	</div>
+
+</div>
+
+<div class="text2">
+	<h1>Title 2</h1>
+	<p>	Quisque auctor lacus massa, non malesuada justo ultricies at. Maecenas mollis condimentum metus sed efficitur. Pellentesque ultrices blandit auctor. Nulla et lorem vitae nisi posuere fringilla. </p>
+</div>	
+</body>
+</html>
