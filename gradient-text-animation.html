@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+
+<style>
+
+body{
+  margin: 0;
+  padding: 0;
+  background: whitesmoke;
+}
+.part {
+  position: absolute;
+  width: 100%;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  font-family: verdana
+}
+
+.colorgradient {
+  color: #f35626;
+  font-size: 8rem;
+  background: #FC466B;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*background-size: 400%;*/
+  animation: colorgradient 1s linear infinite;
+}
+
+/*@keyframes colorgradient {
+  0%{
+    background-position: 0 50%
+  }
+  50%{
+    background-position: 100% 50%
+  }
+  100%{
+    background-position: 0 50%
+  }
+}*/
+
+@keyframes colorgradient {
+  from {
+    filter: hue-rotate(0deg);
+  }
+
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}
+
+</style>
+<body>
+
+<div class="part">
+<h1 class="colorgradient">RIKY RIKY RIKY</h1>
+</div>
+
+</body>
+</html>
