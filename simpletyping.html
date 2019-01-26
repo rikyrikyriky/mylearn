@@ -10,7 +10,6 @@ body{
 	margin: 0;
 	padding: 0;
 }
-
 .typing {
 	position: absolute;
 	top: 50%;
@@ -19,22 +18,18 @@ body{
 	font-family: consolas
 }
 .typing h1 {
+	width:100%;
 	overflow: hidden;
 	white-space: nowrap;
-	animation: typing 3s steps(15) , borderblink .5s linear infinite;
-	border-right: 3px solid rgb(0,0,0);
-	padding: 0px 5px
-
+	animation: typing 5s steps(15, end) , borderblink .5s linear infinite;
+	border-right: 3px solid rgb(0,0,0);	
 }
 @keyframes typing {
-	0% {
+	from {
 		width: 0ch;
 		padding: 0px 0px
 	}
-	100% {
-		width: 15ch;
-		padding: 0px 5px
-	}
+	
 }
 @keyframes borderblink {
 	0% {
